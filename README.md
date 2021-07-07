@@ -92,11 +92,8 @@ python run.py --model TextRNN --adv FreeAT
 
 
 ## 参考
-[1] Explaining and Harnessing Adversarial Examples.
-    arxiv.org/abs/1412.6572
-[2] Adversarial Training Methods for Semi-Supervised Text Classification.
-    arxiv.org/abs/1605.07725
-[3] Fast is better than free: Revisiting adversarial training
-    arxiv.org/abs/2001.03994
+[1] Explaining and Harnessing Adversarial Examples.  arxiv.org/abs/1412.6572
+[2] Adversarial Training Methods for Semi-Supervised Text Classification.    arxiv.org/abs/1605.07725
+[3] Fast is better than free: Revisiting adversarial training.    arxiv.org/abs/2001.03994
 [4] https://github.com/locuslab/fast_adversarial
 [5] https://github.com/649453932/Chinese-Text-Classification-Pytorch
