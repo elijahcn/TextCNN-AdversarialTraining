@@ -56,6 +56,8 @@ tensorboardX
 ## 算法说明
 
 ### Fast Gradient Method(FGM)
+扰动生成：
+![Image text] https://github.com/elijahcn/TextCNN-AdversarialTraining/blob/main/imgs/fgm1.svg
 
 ### Projected Gradient Descent(PGD)
 
@@ -67,7 +69,7 @@ tensorboardX
 --|--|--
 TextCNN|91.16%|TextCNN baseline
 TextCNN+FGM|91.51%|TextCNN + FGM Adversarial Training 
-TextCNN+PGD|90.90%|TextCNN + PGD(k=3) Adversarial Training 
+TextCNN+PGD|91.41%|TextCNN + PGD(k=3) Adversarial Training 
 TextCNN+FreeAT|91.19%|TextCNN + FreeAT(m=3) Adversarial Training 
 
 
