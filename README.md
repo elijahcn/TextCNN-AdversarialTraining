@@ -57,7 +57,7 @@ tensorboardX
 
 ### Fast Gradient Method(FGM)
 扰动生成：
-![Image text(https://github.com/elijahcn/TextCNN-AdversarialTraining/blob/main/imgs/fgm1.svg)
+![Image text](https://github.com/elijahcn/TextCNN-AdversarialTraining/blob/main/imgs/fgm1.svg)
 
 ### Projected Gradient Descent(PGD)
 
