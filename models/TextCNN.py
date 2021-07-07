@@ -10,7 +10,7 @@ class Config(object):
     """配置参数"""
     def __init__(self, dataset, embedding, adv_name=None):
         self.model_name = 'TextCNN'
-        self.use_long_text = True;
+        self.use_long_text = False;
         if self.use_long_text:
             datadir = dataset + '/long';
         else:
