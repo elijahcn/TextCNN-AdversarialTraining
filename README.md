@@ -101,5 +101,5 @@ python run.py --model TextRNN --adv FreeAT
     https://arxiv.org/abs/2001.03994    
 [4] https://github.com/locuslab/fast_adversarial    
 [5] https://github.com/649453932/Chinese-Text-Classification-Pytorch    
-[6] FreeLB: Enhanced Adversarial Training for Natural Language Understanding
+[6] FreeLB: Enhanced Adversarial Training for Natural Language Understanding.    
     https://arxiv.org/pdf/1909.11764.pdf   
