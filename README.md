@@ -1,5 +1,5 @@
-# TextCNN with Adversarial Training
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/elijahcn/TextCNN-AdversarialTraining/blob/main/LICENSE)
+# TextCNN-FGM-PGD-FreeAT-Pytorch
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 中文文本分类，TextCNN，FGSM，FGM，PGD，FreeAT，基于pytorch。
 
@@ -35,14 +35,17 @@ tensorboardX
         log/        # 输出log文件
         ckpt/       # 输出模型文件
 
-## 数据说明
+## 算法说明
 
 ### 短文本分类中文数据集
 从[THUCNews](http://thuctc.thunlp.org/)中抽取了20万条新闻标题，文本长度在20到30之间。一共10个类别，每类2万条。
 
 类别：财经、房产、股票、教育、科技、社会、时政、体育、游戏、娱乐。
 
+数据集划分：
+
 数据集|数据量
+--|--
 训练集|18万
 验证集|1万
 测试集|1万
@@ -51,25 +54,20 @@ tensorboardX
 可以选以字或以词为单位输入模型。
 预训练词向量使用搜狗新闻数据，[点这里下载](https://pan.baidu.com/s/14k-9jsspp43ZhMxqPmsWMQ)  
 
-本实验的对抗训练都是在Embedding数据上进行扰动。
-
-## 算法说明
-
-### Fast Gradient Method(FGM)
-
-### Projected Gradient Descent(PGD)
-
-### Free Adversarial Training(FreeAT)
 
 ### 效果
 
 模型|acc|备注
 --|--|--
-TextCNN|91.16%|TextCNN baseline
-TextCNN+FGM|91.51%|TextCNN + FGM Adversarial Training 
-TextCNN+PGD|91.41%|TextCNN + PGD(k=3) Adversarial Training 
-TextCNN+FreeAT|91.19%|TextCNN + FreeAT(m=3) Adversarial Training 
-
+TextCNN|91.22%|Kim 2014 经典的CNN文本分类
+TextRNN|91.12%|BiLSTM 
+TextRNN_Att|90.90%|BiLSTM+Attention
+TextRCNN|91.54%|BiLSTM+池化
+FastText|92.23%|bow+bigram+trigram， 效果出奇的好
+DPCNN|91.25%|深层金字塔CNN
+Transformer|89.91%|效果较差
+bert|94.83%|bert + fc  
+ERNIE|94.61%|比bert略差(说好的中文碾压bert呢)  
 
 ## 使用说明
 ```
@@ -91,12 +89,11 @@ python run.py --model TextRNN --adv FreeAT
 ```
 
 
-## 参考
-[1] Explaining and Harnessing Adversarial Examples.  
-    arxiv.org/abs/1412.6572  
-[2] Adversarial Training Methods for Semi-Supervised Text Classification.    
-    arxiv.org/abs/1605.07725    
-[3] Fast is better than free: Revisiting adversarial training.    
-    arxiv.org/abs/2001.03994    
-[4] https://github.com/locuslab/fast_adversarial    
-[5] https://github.com/649453932/Chinese-Text-Classification-Pytorch    
+## 对应论文
+[1] Convolutional Neural Networks for Sentence Classification  
+[2] Recurrent Neural Network for Text Classification with Multi-Task Learning  
+[3] Attention-Based Bidirectional Long Short-Term Memory Networks for Relation Classification  
+[4] Recurrent Convolutional Neural Networks for Text Classification  
+[5] Bag of Tricks for Efficient Text Classification  
+[6] Deep Pyramid Convolutional Neural Networks for Text Categorization  
+[7] Attention Is All You Need  
